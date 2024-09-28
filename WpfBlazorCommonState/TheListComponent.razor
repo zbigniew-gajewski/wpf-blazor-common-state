@@ -1,0 +1,25 @@
+﻿@using BlazorWpfTest
+@inject AppState AppState
+
+<button class="btn btn-primary" @onclick="AddNextTask" style="flex: content">Add Next Task</button>
+
+<br/>
+
+@foreach (var item in @AppState.ToDoTasks)
+{
+    <div>@item</div>
+}
+
+
+
+@code {
+    protected override void OnInitialized()
+    {
+        AppState.ToDoTasks.CollectionChanged += (s, e) => StateHasChanged();
+    }
+
+    private void AddNextTask()
+    {
+        AppState.AddTask();
+    }
+}

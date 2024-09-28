@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<TargetFramework>net8.0-windows</TargetFramework>
+		<Nullable>enable</Nullable>
+		<UseWPF>true</UseWPF>
+		<RootNamespace>BlazorWpfTest</RootNamespace>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <None Include="wwwroot\bootstrap\bootstrap.min.css" />
+	  <None Include="wwwroot\bootstrap\bootstrap.min.css.map" />
+	  <None Include="wwwroot\css\app.css" />
+	  <None Include="wwwroot\index.html" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.Components.WebView" Version="8.0.8" />
+		<PackageReference Include="Microsoft.AspNetCore.Components.WebView.Wpf" Version="8.0.91" />
+	</ItemGroup>
+
+</Project>
